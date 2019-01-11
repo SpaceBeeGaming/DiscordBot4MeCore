@@ -8,10 +8,7 @@ namespace DiscordBot4MeCore.xUnit.Tests
         [Fact]
         public void Test1()
         {
-            const int expected = 5;
-            int actual = MyUtility.MyTestUtility(expected);
 
-            Assert.Equal(expected, actual);
         }
     }
 }
