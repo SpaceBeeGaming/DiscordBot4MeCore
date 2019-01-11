@@ -1,6 +1,9 @@
 version: 1.0.{build}
 image: Visual Studio 2017 Preview
 skip_tags: true
+skip_commits:
+  files:
+    '**/*.md'
 dotnet_csproj:
   patch: true
   file: '**\*.csproj'
