@@ -1,5 +1,5 @@
 language: csharp
-solution: DiscordBot4MeCoreSolution.sln
+os: windows
 mono: none
 dotnet: 2.1.503
 git:
@@ -10,4 +10,3 @@ jobs:
       script: dotnet build -c Release
     - stage: test
       script: dotnet test DiscordBot4MeCore.xUnit.Tests/DiscordBot4MeCore.xUnit.Tests.csproj
-
