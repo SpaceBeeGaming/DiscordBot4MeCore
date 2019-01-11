@@ -1,1 +1,1 @@
-# DiscordBot4Me
+# DiscordBot4MeCore
