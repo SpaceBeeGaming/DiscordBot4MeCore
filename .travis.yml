@@ -5,3 +5,5 @@ dotnet: 2.1.503
 script:
   - dotnet build -c Release
   - dotnet test DiscordBot4MeCore.xUnit.Tests/DiscordBot4MeCore.xUnit.Tests.csproj
+git:
+  quiet: true
