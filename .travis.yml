@@ -5,4 +5,4 @@ git:
   quiet: true
 script: 
   - dotnet build -c Release
-  - dotnet test DiscordBot4MeCore.xUnit.Tests/DiscordBot4MeCore.xUnit.Tests.csproj
+  - dotnet test UnitTests.xUnit/UnitTests.xUnit.csproj
