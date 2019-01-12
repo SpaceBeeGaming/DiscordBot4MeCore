@@ -24,7 +24,7 @@ test_script:
 - ps: OpenCover.Console.exe 
       -register:user 
       -target:"C:\Program Files\dotnet\dotnet.exe" 
-      -targetargs:"test UnitTests.xUnit/UnitTests.xnit.csproj" 
+      -targetargs:"test UnitTests.xUnit/UnitTests.xUnit.csproj" 
       -output:".\coverage.xml" 
       -oldStyle 
       -filter:"+[DiscordBot4MeCore*]* -[UnitTests.xUnit*]*"
