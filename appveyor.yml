@@ -30,8 +30,8 @@ test_script:
       -filter:"+[DiscordBot4MeCore*]* -[UnitTests.xUnit*]*"
 after_test:
 - bash:
-  curl -s https://codecov.io/bash > codecov
+    curl -s https://codecov.io/bash > codecov
   
-  chmod +x codecov
+    chmod +x codecov
   
-  ./codecov.sh -f "coverage.xml" -t $CODECOV_TOKEN
+    ./codecov.sh -f "coverage.xml" -t $CODECOV_TOKEN
