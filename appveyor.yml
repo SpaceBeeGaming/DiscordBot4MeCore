@@ -22,8 +22,8 @@ build_script:
 - ps: dotnet build -c Release
 test_script:
 - ps: >
-  dotnet --version
+  - dotnet --version
   
-  OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:"test" -output:".\coverage.xml" -oldStyle -filter:"+[DiscordBot4MeCore*]* -[UnitTests.xUnit*]*"
+  - OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:"test" -output:".\coverage.xml" -oldStyle -filter:"+[DiscordBot4MeCore*]* -[UnitTests.xUnit*]*"
 after_test:
 - ps: .\codecov -f "coverage.xml" -t $CODECOV_TOKEN
