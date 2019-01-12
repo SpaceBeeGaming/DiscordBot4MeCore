@@ -13,13 +13,13 @@ dotnet_csproj:
   file_version: '{version}'
   informational_version: '{version}'
 before_build:
-  nuget restore
+  nuget restore DiscordBot4MeCore.sln
   nuget install opencover.portable
   nuget install codecov
 
 build_script:
 - ps: dotnet build -c Release
 test_script:
-- ps: OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:"test" -output:".\coverage.xml" -oldStyle -filter:"+[DiscordBot4MeCore*]* -[DiscordBot4MeCore*]*Tests.*"
+- ps: OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:"test" -output:".\coverage.xml" -oldStyle -filter:"+[DiscordBot4MeCore*]* -[DiscordBot4MeCore.xUnit.Tests*]*"
 after_test:
 - ps: .\codecov -f "coverage.xml" -t $CODECOV_TOKEN
