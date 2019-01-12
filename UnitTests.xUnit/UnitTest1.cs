@@ -1,7 +1,8 @@
 using System;
+using DiscordBot4MeCore;
 using Xunit;
 
-namespace DiscordBot4MeCore.xUnit.Tests
+namespace UnitTests.xUnit
 {
     public class UnitTest1
     {
