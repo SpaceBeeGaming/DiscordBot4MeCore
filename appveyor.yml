@@ -28,7 +28,6 @@ test_script:
       -output:".\coverage.xml" 
       -oldStyle 
       -filter:"+[DiscordBot4MeCore*]* -[UnitTests.xUnit*]*"
-after_test:
 - bash:
     curl -s https://codecov.io/bash > codecov
   
