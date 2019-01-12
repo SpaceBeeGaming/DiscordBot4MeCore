@@ -20,7 +20,7 @@ test_script:
     
     nuget install OpenCover -OutputDirectory packages -Version 4.6.166
     
-    dotnet tool install coveralls.net --version 1.0.0-beta0002 --tool-path tools
+    dotnet tool install coveralls.net --version 1.0.0 --tool-path tools
     
     .\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user -target:dotnet.exe "-targetargs:"".\packages\xunit.runner.console.2.3.1\tools\netcoreapp2.0\xunit.console.dll"" ""DiscordBot4MeCore.xUnit.Tests\bin\Release\netcoreapp2.1\DiscordBot4MeCore.xUnit.Tests.dll"" -noshadow -appveyor" -filter:"+[DiscordBot4MeCore*]*" -oldStyle -output:opencoverCoverage.xml
     
