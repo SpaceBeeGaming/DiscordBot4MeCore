@@ -14,9 +14,10 @@ dotnet_csproj:
   informational_version: '{version}'
 before_build:
   nuget restore DiscordBot4MeCore.sln
+  
   nuget install opencover.portable
+  
   nuget install codecov
-
 build_script:
 - ps: dotnet build -c Release
 test_script:
