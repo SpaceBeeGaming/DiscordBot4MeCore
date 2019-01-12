@@ -13,7 +13,7 @@ dotnet_csproj:
   file_version: '{version}'
   informational_version: '{version}'
 before_build:
-  nuget restore DiscordBot4MeCore.sln
+  nuget restore
   
   nuget install opencover.portable
   
