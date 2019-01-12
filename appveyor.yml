@@ -15,7 +15,7 @@ dotnet_csproj:
 before_build:
   nuget restore
   
-  nuget install opencover.portable
+  nuget install opencover
   
   nuget install codecov
 build_script:
